@@ -40,11 +40,13 @@ We use [reveal.js](https://revealjs.com/) for creating beautiful, interactive pr
 
 ## 📋 Session Index
 
+You can view the presentations here: https://carney-co.github.io/brown-bag-sessions/
+
 Browse our collection of Brown Bag Sessions:
 
-| Session | Title                                                                                      | Presenter                               | Date       | Links                                                                                                        |
-| ------- | ------------------------------------------------------------------------------------------ | --------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| 01      | [Improving Developer Experience](https://carney.github.io/brown-bag-sessions/sessions/01/) | [Gustavo](https://github.com/Ghostavio) | 2025-06-03 | [View Presentation](https://carney.github.io/brown-bag-sessions/sessions/01/) • [Repository](./sessions/01/) |
+| Session | Title                                                                                         | Presenter                               | Date       | Links                                                                                                           |
+| ------- | --------------------------------------------------------------------------------------------- | --------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- |
+| 01      | [Improving Developer Experience](https://carney-co.github.io/brown-bag-sessions/sessions/01/) | [Gustavo](https://github.com/Ghostavio) | 2025-06-03 | [View Presentation](https://carney-co.github.io/brown-bag-sessions/sessions/01/) • [Repository](./sessions/01/) |
 
 _More sessions coming soon! Want to present? Reach out on [Slack](https://carney.slack.com/archives/C08V05Y8F7D) 💬_
 
