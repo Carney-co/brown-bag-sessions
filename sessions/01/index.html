@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Improving Developer Experience - Carney Brown Bag Session</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/copycode/copycode.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2 class="r-fit-text">Improving your developer experience 💃🕺</h2>
+
+          <img
+            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExam1qNDg4ajY4czZwa2NudDRvYWc4YWVnb3ZrczZoODI0ZDA1ZWo2aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mcsPU3SkKrYDdW3aAU/giphy.gif"
+            alt="cat typing on a laptop"
+          />
+        </section>
+
+        <section>
+          <p>If you're gonna spend time at your computer:</p>
+          <p class="fragment">Coding 💻</p>
+          <p class="fragment">🐛 Debugging</p>
+          <p class="fragment">Terminal surfing 🏄</p>
+          <p class="fragment">🗂️ Tab hoarding</p>
+          <p class="fragment underline">
+            You should make it as enjoyable as possible 🤩
+          </p>
+          <p class="fragment">💪 It'll make you more productive!</p>
+        </section>
+
+        <section>
+          <p>A few tools can make your life easier 🏖️</p>
+          <p class="fragment">🗡️ And turn your computer into a katana</p>
+          <p class="fragment">
+            🎸 So your can become a rockstar ninja developer 🥷
+          </p>
+          <p class="fragment">Cutting through the code like butter 🧈</p>
+          <img
+            class="fragment fade-up"
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnJ3cTVrMGM1czNkNnEwbnJ3ZGc5eHh5MnJhbjMycGsxZzU5M3A2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uA8WItRYSRkfm/giphy.gif"
+            alt="cat cutting a rope"
+          />
+        </section>
+
+        <section>
+          <h3>Pick a good package manager! 📦</h3>
+          <img
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3B2MzJ0M3NsOTNwODV3MWxieTRxc3RwaTc4dXltMDRkMDU3Mmw4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EmMWgjxt6HqXC/giphy.gif"
+            alt="cat jumping out of a box"
+          />
+        </section>
+
+        <section>
+          <p>🐧 If you're on Linux, you're lucky!</p>
+          <p class="fragment">
+            It's very likely that you're already using
+            <span class="underline">apt</span> 🚀
+          </p>
+          <p class="fragment">👌 And it's really good</p>
+          <p class="fragment">You don't have to install anything 🤷‍♂️</p>
+          <p class="fragment">😎 Life is good</p>
+        </section>
+
+        <section>
+          <p>If you're on Windows, you're not so lucky 😢</p>
+          <p class="fragment">
+            👾 You're probably using <span class="underline">exe</span> files
+          </p>
+          <p class="fragment">Like they used to do in the 90s 🪩</p>
+          <p class="fragment">
+            🙅‍♂️ But it's not the best way to install software
+          </p>
+          <p class="fragment">
+            DON'T PANIC, <a href="https://scoop.sh/">Scoop</a> comes to the
+            rescue 🍨
+          </p>
+          <pre class="fragment">
+            <code data-trim>
+              Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+              Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>If you're on Windows 11 though, you're lucky! 🪟</p>
+          <p class="fragment">
+            💁 You get
+            <a
+              href="https://learn.microsoft.com/en-us/windows/package-manager/winget/"
+              >WinGet</a
+            >
+            for free!
+          </p>
+          <p class="fragment">
+            It's good enough, but consider also installing
+            <a href="https://scoop.sh/">Scoop</a> 🍨
+          </p>
+        </section>
+
+        <section>
+          <p>
+            If you use the Windows Subsystem for Linux (<a
+              href="https://learn.microsoft.com/en-us/windows/wsl/about"
+              >WSL</a
+            >)
+          </p>
+          <p class="fragment">You can basically run Linux on Windows 🤯</p>
+          <p class="fragment">
+            And also use <span class="underline">apt</span> 🚀
+          </p>
+          <img
+            class="fragment"
+            src="https://media1.tenor.com/m/-DP-V9BpL6EAAAAC/incredible-double.gif"
+            alt="double sunglasses"
+          />
+        </section>
+
+        <section>
+          <p>🍎 If you're on MacOS, you're the luckiest!</p>
+          <p class="fragment">
+            🍺 <a href="https://brew.sh/">Homebrew</a> is a gift from the gods
+            ⚡️
+          </p>
+          <p class="fragment">And it even works on Linux now 😱</p>
+          <pre class="fragment">
+            <code data-trim>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Pick a good font! 🔡</h2>
+          <img
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm5kc3JiOHIyY2x1ZDR1bjh1enBwNmRrZjRiNmRuc2t3YTRoMDAzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif"
+            alt="cat typing on a laptop"
+          />
+        </section>
+
+        <section>
+          <p>
+            A good font enchances code readability, reduces eye strain and
+            provides helpful ligatures for common programming symbols
+          </p>
+        </section>
+
+        <section>
+          <a
+            href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip"
+            >FiraCode Nerd Font</a
+          >
+          <img
+            src="https://raw.githubusercontent.com/tonsky/FiraCode/refs/heads/master/extras/logo.svg"
+            alt="FiraCode Nerd Font"
+          />
+        </section>
+
+        <section>
+          <h4>Some other good alternatives:</h4>
+          <p class="fragment">
+            <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a>
+          </p>
+          <p class="fragment">
+            <a href="https://fsd.it/shop/fonts/pragmatapro/"
+              >PragmataPro (€19)</a
+            >
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/RedHatOfficial/RedHatFont"
+              >Red Hat Mono (no ligatures 😢)</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h2>💻 Pick a good terminal!</h2>
+          <p>Your terminal is like a window to your computer's soul</p>
+          <img
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc251MzNpMzBicGpmcnh0cWZ6Yno0YXVpdjMzbGIweHJweTMzMHM4NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KA593kO0JvXMs/giphy.gif"
+            alt="terminal"
+          />
+        </section>
+        <section>
+          <p>Get inspired by one of the greatest consoles of all time</p>
+          <img
+            src="https://images.steamusercontent.com/ugc/1838042997179758032/879B93D9350FD019DCA37D833E469D4AE46AB786/"
+            alt="quake console"
+          />
+        </section>
+
+        <section>
+          <section>
+            <p>MacOS 🍎</p>
+            <p class="fragment">
+              <a href="https://www.iterm2.com/">iTerm2</a>
+            </p>
+            <pre class="fragment fade-up">
+              <code>
+                brew install --cask iterm2
+              </code>
+            </pre>
+            <p class="fragment">🐧 Linux</p>
+            <p class="fragment">
+              <a href="https://guake.github.io/">Guake</a>
+            </p>
+            <pre class="fragment fade-up">
+              <code>
+                sudo apt install guake
+              </code>
+            </pre>
+            <p class="fragment">Windows 🪟</p>
+            <p class="fragment">
+              <a
+                href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab"
+                >Windows Terminal</a
+              >
+              +
+              <a href="https://github.com/flyingpie/windows-terminal-quake"
+                >windows-terminal-quake</a
+              >
+            </p>
+            <small class="fragment fade-up"
+              >(press down for extra windows setup)</small
+            >
+          </section>
+          <section>
+            <p>
+              After installing the
+              <a
+                href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab"
+                >Windows Terminal</a
+              >
+            </p>
+            <p class="fragment">
+              You can install
+              <a href="https://github.com/flyingpie/windows-terminal-quake"
+                >windows-terminal-quake</a
+              >
+              using Scoop:
+            </p>
+            <pre class="fragment">
+              <code data-trim>
+                scoop install https://raw.githubusercontent.com/flyingpie/windows-terminal-quake/master/scoop/wtq-latest.json
+              </code>
+            </pre>
+            <p class="fragment">or using Winget:</p>
+            <pre class="fragment">
+              <code>
+                winget install windows-terminal-quake
+              </code>
+            </pre>
+            <p class="fragment">
+              You can then call 'wtq' from the command line
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h4>Bonus terminal ✨</h4>
+          <p>
+            <a href="https://www.warp.dev/">Warp</a>
+          </p>
+          <img
+            src="https://camo.githubusercontent.com/52a5cbad383400299b6e4bd4251a87a519f81f30e02116beae6390d3a7a3e928/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f77617270646f746465762d636f6e74656e742f776172702d70726f647563742d32345f31302e706e67"
+            alt="Warp terminal"
+            style="max-height: 50vh"
+          />
+        </section>
+
+        <section>
+          <p>Configure your terminal ⚙️</p>
+          <p class="fragment">🖊️ Set your favorite font and theme</p>
+          <p class="fragment">Set you hotkey ⌨️</p>
+          <p class="fragment">🎨 Set up the appearance of your terminal</p>
+          <p class="fragment">
+            (or just import my
+            <a href="./assets/iterm-profile-settings.json" title="for iTerm2"
+              >json</a
+            >
+            settings if you prefer 🤷‍♂️)
+          </p>
+        </section>
+
+        <section>
+          <h2>🐚 Pick a good shell!</h2>
+          <p class="fragment">
+            If you're not using <span class="underline">zsh</span>, you're
+            missing out!
+          </p>
+          <p class="fragment">
+            zsh offers smarter auto-completion, powerful
+            <a href="https://en.wikipedia.org/wiki/Glob_(programming)"
+              >globbing</a
+            >, and plugins for an enhanced experience.
+          </p>
+          <img
+            class="fragment"
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJ6cmljNjA5OTF1MjNpaWRiazlocTBwdnRxeDc2ZTBxZ2hjNDl2eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1FEbyvUxkC8MTIj209/giphy.gif"
+            alt="silly shell"
+          />
+        </section>
+
+        <section>
+          <p>
+            On MacOS, <span class="underline">zsh</span> is the default shell ❤️
+          </p>
+          <p class="fragment">
+            On Linux, you can install it with
+            <span class="underline">apt</span>:
+          </p>
+          <pre class="fragment">
+            <code>
+              sudo apt update
+              sudo apt install zsh
+            </code>
+          </pre>
+          <p class="fragment">
+            Or using <span class="underline">Homebrew</span>:
+          </p>
+          <pre class="fragment">
+            <code>
+              brew install zsh
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>Then you need to set it as your default shell:</p>
+          <pre class="fragment">
+            <code>
+              chsh -s $(which zsh)
+            </code>
+          </pre>
+          <p class="fragment">
+            And your configuration will be stored in
+            <span class="underline">~/.zshrc</span>
+          </p>
+          <p class="fragment">
+            If the file doesn't exist, you can create it with:
+          </p>
+          <pre class="fragment">
+            <code>
+              touch ~/.zshrc
+            </code>
+          </pre>
+          <p class="fragment">
+            Open it on your favorite editor and let's have some fun!
+          </p>
+        </section>
+
+        <section>
+          <p>If you're on Windows,</p>
+          <p class="fragment">
+            🤔
+            <a href="https://walterteng.com/using-zsh-on-windows"
+              >Things might be a bit more complicated</a
+            >
+          </p>
+          <p class="fragment">
+            But there are some
+            <a
+              href="https://dev.to/pavlosisaris/windows-command-line-revolution-unleash-zsh-and-oh-my-zsh-a-simple-guide-for-developers-271o"
+              >guides</a
+            >
+            to get you up and running with
+            <span class="underline">zsh</span> on Windows 🏃
+          </p>
+          <p class="fragment">It's probably a good idea to stick to WSL</p>
+          <p class="fragment">
+            And just install <span class="underline">zsh</span> the same way you
+            would on Linux
+          </p>
+        </section>
+
+        <section>
+          <p>
+            A lot of people use
+            <a href="https://ohmyz.sh/">oh-my-zsh</a>,
+            <a href="https://github.com/sorin-ionescu/prezto">prezto</a> or
+            <a href="https://github.com/zdharma-continuum/zinit">zinit</a>
+            to manage their
+            <span class="underline">zsh</span> configuration
+          </p>
+          <p class="fragment">
+            Incredible frameworks if you're a power user and want to dive deep
+            into customizing your shell
+          </p>
+          <p class="fragment">But it's also a bit overkill for most people</p>
+          <p class="fragment">
+            It can add a lot of complexity and slow down your shell performance
+          </p>
+          <p class="fragment">
+            And we can get a lot of the same benefits by just using a good
+            prompt and a few plugins
+          </p>
+        </section>
+
+        <section>
+          <h2>Pick a good prompt! 🤖</h2>
+          <img
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHM4dGQ1Mmw5aGwzNm0wNGpsOG53OTBoaHZ0MnM0NWNqcTY4cnI2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPnAiaMCws8nOsE/giphy.gif"
+            alt="cat using the terminal"
+          />
+        </section>
+
+        <section>
+          <p>
+            A good prompt should provide you with useful information at a glance
+            🔎
+          </p>
+          <video muted="" autoplay="" loop="" playsinline="">
+            <source src="https://starship.rs/demo.webm" type="video/webm" />
+            <source src="https://starship.rs/demo.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        <section>
+          <p>
+            My personal favorite is
+            <a href="https://starship.rs/">Starship</a> 🚀
+          </p>
+          <p class="fragment">⚡️ It's blazing fast and easy to configure</p>
+          <p class="fragment">
+            And it looks great (as seen on the previous slide) 💅
+          </p>
+        </section>
+        <section>
+          <p>Install it directly with shell:</p>
+          <pre class="fragment">
+            <code>
+              curl -sS https://starship.rs/install.sh | sh
+            </code>
+          </pre>
+          <p class="fragment">Or using Homebrew: (recommended)</p>
+          <pre class="fragment">
+            <code>
+              brew install starship
+            </code>
+          </pre>
+          <p class="fragment">Or using Winget on Windows:</p>
+          <pre class="fragment">
+            <code>
+              winget install starship
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h4>Some other good alternatives:</h4>
+          <p class="fragment">
+            <a href="https://github.com/sindresorhus/pure">Pure</a>
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/romkatv/powerlevel10k">Powerlevel10k</a>
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/denysdovhan/spaceship-prompt"
+              >Spaceship Prompt</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <p>Now let's supercharge your shell with some plugins!</p>
+          <p class="fragment">
+            <a href="https://github.com/zsh-users/zsh-autosuggestions"
+              >zsh-autosuggestions</a
+            >,
+            <a href="https://github.com/zsh-users/zsh-history-substring-search"
+              >zsh-history-substring-search</a
+            >
+            and
+            <a href="https://github.com/zsh-users/zsh-syntax-highlighting"
+              >zsh-syntax-highlighting</a
+            >
+            are must-have plugins
+          </p>
+          <pre class="fragment">
+            <code data-trim>
+              brew install zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
+              echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+              echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+              echo "source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh" >> ~/.zshrc
+            </code>
+          </pre>
+          <p class="fragment">If you don't use Homebrew:</p>
+          <pre class="fragment">
+            <code data-trim>
+              git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+              git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+              git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/zsh-history-substring-search
+              echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+              echo "source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+              echo "source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh" >> ~/.zshrc
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>
+            Then you are gonna need
+            <a href="https://github.com/rupa/z">z</a> and
+            <a href="https://github.com/junegunn/fzf">fzf</a>
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/rupa/z">z</a> is a smarter cd command to
+            teleport you to your most used directories 📂
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/junegunn/fzf">fzf</a> is a fuzzy finder
+            to search through your history and files 🔭
+          </p>
+        </section>
+
+        <section>
+          <p>Install them with Homebrew:</p>
+          <pre class="fragment">
+            <code data-trim>
+              brew install z fzf
+              echo "source $(brew --prefix)/etc/profile.d/z.sh" >> ~/.zshrc
+              echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh" >> ~/.zshrc
+              echo "source <(fzf --zsh)" >> ~/.zshrc
+            </code>
+          </pre>
+          <p class="fragment">If you don't use Homebrew:</p>
+          <pre class="fragment">
+            <code data-trim>
+              git clone https://github.com/rupa/z.git ~/.z
+              echo "source ~/.z/z.sh" >> ~/.zshrc
+              git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+              ~/.fzf/install
+              echo "[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh" >> ~/.zshrc
+              echo "source <(fzf --zsh)" >> ~/.zshrc
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>Add the following to ~/.zprofile:</p>
+          <pre class="fragment language-zsh">
+            <code data-trim>
+              # FZF Options
+
+              export FZF_DEFAULT_OPTS='--reverse --extended --tabstop=2 --margin 1 --height 40%'
+              export FZF_CTRL_T_COMMAND="/usr/local/bin/fd --strip-cwd-prefix --hidden --follow --no-ignore-vcs";
+              export FZF_DEFAULT_COMMAND="${FZF_CTRL_T_COMMAND} --type f";
+              # https://github.com/sharkdp/bat/issues/634#issuecomment-524525661
+              export FZF_PREVIEW_COMMAND="COLORTERM=truecolor previewer {}";
+              export FZF_ALT_C_COMMAND="${FZF_CTRL_T_COMMAND} --type d .";
+              export FZF_DEFAULT_OPTS="--border thinblock --prompt='» ' --pointer='▶' --marker='✓ ' --reverse --tabstop 2 --multi --color=bg+:-1,marker:010 --separator='' --bind '?:toggle-preview' --info inline-right";
+              export FZF_CTRL_T_OPTS="--preview-window right:border-left:60%:hidden --preview='(${FZF_PREVIEW_COMMAND})' --walker-skip .git,node_modules";
+              export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:wrap:hidden --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' --header 'Press CTRL-Y to copy command into clipboard'";
+              export FZF_ALT_C_OPTS="--preview='(${FZF_PREVIEW_COMMAND}) 2> /dev/null' --walker-skip .git,node_modules";
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>Add the following to ~/.zshrc:</p>
+          <pre class="fragment language-zsh">
+            <code data-trim>
+              # Enable auto-cd
+              setopt AUTO_CD
+              
+              # limit of history entries
+              HISTORY_IGNORE='(clear|c|pwd|exit|* —help|[bf]g *|less *|cd ..|cd -)'
+
+              # History options
+              setopt BANG_HIST                 # Perform textual history expansion, csh-style, treating the character '!' specially.
+              setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+              setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+              setopt SHARE_HISTORY             # Share history between all sessions.
+              setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+              setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+              setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+              setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+              setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+              setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+              setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+              setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks from each command line being added to the history list.
+              setopt APPEND_HISTORY            # append to history file
+              setopt HIST_NO_STORE             # Don't store history commands
+              setopt HIST_NO_FUNCTIONS         # Don't store function definitions
+              setopt HIST_SAVE_BY_COPY         # When writing out a copy of the history file, zsh preserves the old file's permissions and group information
+
+              # NOTE: must come before zsh-history-substring-search & zsh-syntax-highlighting.
+              autoload -U select-word-style
+              # only alphanumeric chars are considered WORDCHARS
+              select-word-style bash
+
+              ## FZF Functions
+              # https://github.com/junegunn/fzf/wiki/Examples#z
+              unalias z
+              z() {
+                if [[ -z "$*" ]]; then
+                  cd "$(_z -l 2>&1 | fzf +s --tac | sed 's/^[0-9,.]* *//')"
+                else
+                  _last_z_args="$@"
+                  _z "$@"
+                fi
+              }
+
+              zz() {
+                cd "$(_z -l 2>&1 | sed 's/^[0-9,.]* *//' | fzf -q $_last_z_args)"
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>Now let's take your git game to the next level! 😼</p>
+          <p class="fragment">
+            Using
+            <a href="https://github.com/scmbreeze/scm_breeze">scm_breeze</a>:
+          </p>
+          <img
+            class="fragment"
+            src="https://camo.githubusercontent.com/9b5858e799ff8c3a6e78567eb6be172ffe12f6c62688a415fb0e826474d2807c/687474703a2f2f6d61646562796e617468616e2e636f6d2f636f6e74656e742f696d616765732f706f7374732f323031312f31302f7374617475735f776974685f73686f7274637574732d726573697a65642d706f73742e706e67"
+            alt="scm_breeze"
+          />
+        </section>
+
+        <section>
+          <p>Install it like this:</p>
+          <pre class="fragment">
+            <code data-trim>
+              git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+              ~/.scm_breeze/install.sh
+            </code>
+          </pre>
+          <p class="fragment">And add the following to ~/.zshrc:</p>
+          <pre class="fragment">
+            <code data-trim>
+              [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>A few more cool things you can add to your shell:</p>
+          <p class="fragment">
+            <a href="https://github.com/sharkdp/bat">bat</a> for better cat with
+            syntax highlighting and git integration
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/sharkdp/fd">fd</a> for better find
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/eza-community/eza">eza</a> for better ls
+          </p>
+          <p class="fragment">
+            <a href="https://hub.github.com/">hub</a> for better git
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/wofr06/lesspipe">lesspipe</a> for
+            displaying more with less
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/sxyazi/yazi">yazi</a> to open absolutely
+            everything on your terminal
+          </p>
+          <p class="fragment">
+            <a href="https://github.com/mtoyoda/sl">sl</a> to cure your bad
+            habit of mistyping
+          </p>
+        </section>
+
+        <section>
+          <p>And some useful aliases:</p>
+          <pre class="fragment">
+            <code data-trim>
+              alias "?"="pwd"
+              alias c="clear "
+              alias git="hub "
+              alias gcob="gco -b "
+              alias y="yarn"
+              alias fd="fd --hidden "
+              alias l="eza --long --all --git --icons"
+              alias cat='bat '
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>In the next episode...</h2>
+          <p class="fragment">
+            We're gonna look into the best editors and extensions
+          </p>
+          <p class="fragment">
+            Spoiler: It's <a href="http://cursor.com/">Cursor</a>
+          </p>
+          <p class="fragment">
+            And we'll explore the most useful Chrome extensions for development
+          </p>
+          <p class="fragment">
+            Like
+            <a
+              href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+              >react-developer-tools</a
+            >
+            and
+            <a
+              href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+              >axe-devtools</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h2>Thank you for watching!</h2>
+          <p class="fragment">Next steps:</p>
+          <p class="fragment">Create a repo for our brown bag sessions</p>
+          <p class="fragment">Create a Slack channel for further discussion</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/copycode/copycode.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, CopyCode],
+      });
+    </script>
+  </body>
+</html>

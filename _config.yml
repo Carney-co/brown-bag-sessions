@@ -1,0 +1,7 @@
+# GitHub Pages Configuration
+title: Carney Brown Bag Sessions
+description: Knowledge shared is knowledge multiplied
+theme: none
+include:
+  - index.html
+  - sessions/

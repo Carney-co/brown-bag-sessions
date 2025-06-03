@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carney Brown Bag Sessions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .intro {
+        background: white;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .intro h2 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      .intro p {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .sessions {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .session-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .session-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .session-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1.5rem;
+        position: relative;
+      }
+
+      .session-number {
+        font-size: 3rem;
+        font-weight: 700;
+        opacity: 0.3;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+      }
+
+      .session-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+      }
+
+      .session-body {
+        padding: 2rem;
+      }
+
+      .session-description {
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+
+      .session-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: #667eea;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #5a67d8;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #e2e8f0;
+        color: #4a5568;
+      }
+
+      .btn-secondary:hover {
+        background: #cbd5e0;
+      }
+
+      .cta {
+        background: white;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .cta h2 {
+        color: #667eea;
+        margin-bottom: 1rem;
+      }
+
+      .cta p {
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 3rem 0;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .sessions {
+          grid-template-columns: 1fr;
+        }
+
+        .intro,
+        .session-body,
+        .cta {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>📔 Carney Brown Bag Sessions</h1>
+      <p>Knowledge shared is knowledge multiplied</p>
+    </header>
+
+    <div class="container">
+      <section class="intro">
+        <h2>Learn. Share. Grow.</h2>
+        <p>
+          Brown Bag Sessions are informal presentations where team members share
+          knowledge, insights, and experiences. Join us on our journey of
+          continuous learning and collaboration.
+        </p>
+      </section>
+
+      <section class="sessions">
+        <article class="session-card">
+          <div class="session-header">
+            <div class="session-number">01</div>
+            <h3 class="session-title">Improving Developer Experience</h3>
+          </div>
+          <div class="session-body">
+            <p class="session-description">
+              Transform your terminal into a powerful development environment
+              with modern tools, beautiful prompts, and enhanced workflows.
+              Learn how to supercharge your daily development experience.
+            </p>
+            <div class="session-links">
+              <a href="./sessions/01/index.html" class="btn btn-primary"
+                >View Presentation</a
+              >
+              <a
+                href="https://github.com/Carney-co/brown-bag-sessions/tree/main/sessions/01"
+                class="btn btn-secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder for future sessions -->
+        <article
+          class="session-card"
+          style="opacity: 0.6; pointer-events: none"
+        >
+          <div
+            class="session-header"
+            style="
+              background: linear-gradient(135deg, #a0a0a0 0%, #808080 100%);
+            "
+          >
+            <div class="session-number">02</div>
+            <h3 class="session-title">Coming Soon</h3>
+          </div>
+          <div class="session-body">
+            <p class="session-description">
+              The next Brown Bag Session is in the works. Have an idea? Want to
+              present? Reach out to us!
+            </p>
+            <div class="session-links">
+              <span class="btn btn-primary" style="background: #a0a0a0"
+                >Coming Soon</span
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="cta">
+        <h2>🚀 Want to Present?</h2>
+        <p>
+          We encourage everyone at Carney to share their knowledge! Whether
+          you're an expert in a specific technology or want to explore a new
+          concept with the team, your contribution is valuable.
+        </p>
+        <a
+          href="https://carney.slack.com/archives/C08V05Y8F7D"
+          class="btn btn-primary"
+        >
+          Join the Conversation on Slack
+        </a>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>
+        <strong
+          ><a href="https://carney.co" style="color: #667eea">Carney</a></strong
+        ><br />
+        We create brands that break through the noise.
+      </p>
+      <p style="margin-top: 1rem">
+        <a
+          href="https://github.com/Carney-co/brown-bag-sessions"
+          style="color: #667eea"
+          >View on GitHub</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
